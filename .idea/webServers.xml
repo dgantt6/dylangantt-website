@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="cc168595-8100-4627-a6c6-422e10cddb05" name="DG website" url="http://dylangantt.com">
+        <fileTransfer accessType="SFTP" sshConfigId="8fc57740-f7bc-4368-a8f6-1628d98b3920" sshConfig="DG website">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
