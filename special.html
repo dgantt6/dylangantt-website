@@ -107,20 +107,73 @@
     <h1>🔒 Secret Gallery</h1>
     <p>Welcome to the exclusive dark gallery.</p>
 
-    <div class="gallery">
-      <img src="images/image1.jpeg" alt="photo">
-      <img src="images/image2.jpeg" alt="photo">
-      <img src="images/image3.jpeg" alt="photo">
-      <img src="images/image4.jpeg" alt="photo">
-      <img src="images/image5.jpeg" alt="photo">
-      <img src="images/image6.jpeg" alt="photo">
-        <img src="images/image7.jpeg" alt="photo">
-        <img src="images/image8.jpeg" alt="photo">
-        <img src="images/image9.jpeg" alt="photo">
-        <img src="images/image10.jpeg" alt="photo">
-        <img src="images/image11.jpeg" alt="photo">
-        <img src="images/image12.jpeg" alt="photo">
-    </div>
+    <script>
+  const images = [
+    "images/image1.jpeg",
+    "images/image2.jpeg",
+    "images/image3.jpeg",
+    "images/image4.jpeg",
+    "images/image5.jpeg",
+    "images/image6.jpeg",
+    "images/image7.jpeg",
+    "images/image8.jpeg",
+    "images/image9.jpeg",
+    "images/image10.jpeg",
+    "images/image11.jpeg",
+    "images/image12.jpeg"
+  ];
+
+  let currentIndex = 0;
+
+  function openLightbox(index) {
+    currentIndex = index;
+    document.getElementById("lightbox-img").src = images[currentIndex];
+    document.getElementById("lightbox").style.display = "flex";
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+
+  /* -------------------------
+       SWIPE SUPPORT
+     ------------------------- */
+
+  let startX = 0;
+  let endX = 0;
+
+  const lb = document.getElementById("lightbox");
+
+  lb.addEventListener("touchstart", (e) => {
+    startX = e.changedTouches[0].screenX;
+  });
+
+  lb.addEventListener("touchend", (e) => {
+    endX = e.changedTouches[0].screenX;
+    handleSwipe();
+  });
+
+  function handleSwipe() {
+    const threshold = 50; // minimum px needed to count as a swipe
+
+    if (endX < startX - threshold) {
+      nextImage();
+    } else if (endX > startX + threshold) {
+      prevImage();
+    }
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    document.getElementById("lightbox-img").src = images[currentIndex];
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    document.getElementById("lightbox-img").src = images[currentIndex];
+  }
+
+</script>
   </section>
 </div>
 </body>
