@@ -120,6 +120,7 @@
           <img src="images/image10.jpeg" onclick="openLightbox(9)">
           <img src="images/image11.jpeg" onclick="openLightbox(10)">
           <img src="images/image12.jpeg" onclick="openLightbox(11)">
+          <img src="images/image13.jpeg" onclick="openLightbox(12)">
     </div>
     <script>
   const images = [
@@ -134,7 +135,8 @@
     "images/image9.jpeg",
     "images/image10.jpeg",
     "images/image11.jpeg",
-    "images/image12.jpeg"
+    "images/image12.jpeg",
+      "images/image13.jpeg",
   ];
 
   let currentIndex = 0;
@@ -190,6 +192,32 @@
 </script>
   </section>
 </div>
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img">
+</div>
+
+<style>
+  #lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  #lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+  }
+</style>
+
 </body>
 
 </html>
