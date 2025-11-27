@@ -1,25 +1,126 @@
+/* ============================================================
+   GLOBAL PAGE SETTINGS
+   ============================================================ */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    font-family: 'Exo 2', sans-serif;
+    background-color: #000000; /* Entire page black */
+    color: white;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
-
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-}
-
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
+html, body {
+    height: 100%;
 }
 
 footer {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #333;
+    margin-top: auto;
+}
+/* ============================================================
+   HEADER BAR LAYOUT
+   ============================================================ */
+.header-bar {
+    background-color: black;
+    width: 100%;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    /* 3 columns: empty | nav centered | name right */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left,
+.header-right {
+    flex: 1;
+}
+
+.top-nav {
+    flex: 2; /* keeps the nav centered */
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.header-right {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 40px;
+}
+
+/* Nav + name shared styles */
+.top-nav a,
+.name-link {
     color: white;
+    text-decoration: none;
+    font-size: 18px;
+
+    /* Blue outline */
+    text-shadow:
+        -1px -1px 0 #007bff,
+         1px -1px 0 #007bff,
+        -1px  1px 0 #007bff,
+         1px  1px 0 #007bff;
+}
+/* Make only the name larger */
+.header-right a {
+    font-size: 26px;   /* adjust as you like */
+    font-weight: 700;  /* optional: makes it bolder */
+}
+/* Header link base style */
+header a {
+    transition: 0.25s ease-in-out;
+}
+
+/* Glow hover effect ONLY in the header */
+header a:hover {
+    text-shadow: 0 0 8px #4da3ff, 0 0 12px #4da3ff;
+    color: #4da3ff;        /* optional accent */
+    transform: translateY(-2px); /* nice subtle lift */
+}
+/* ============================================================
+   PAGE CONTENT SPACING
+   ============================================================ */
+.content-section {
+    padding-top: 120px; /* Keeps content below fixed header */
+    background-color: black; /* Remove white block */
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+    background-color: black;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.social-icons {
+    margin-top: 80px;            /* vertical spacing below your name */
+    display: flex;
+    flex-direction: column;
+    gap: 25px;                   /* spacing between icons */
+    justify-content: right;     /*  right */
+    align-items: flex-end;
+    margin-right: 20px;
+}
+
+.social-icons img {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) invert(1);   /* makes icons white to match dark background */
+    transition: 0.25s ease-in-out;
+    opacity: 0.85;
+}
+
+.social-icons img:hover {
+    opacity: 1;
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 8px #4da3ff);   /* glow hover effect */
 }

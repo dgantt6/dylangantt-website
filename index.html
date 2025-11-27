@@ -4,26 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dylan Gantt</title>
+
+    <!-- Font: Exo 2 -->
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <h1>Welcome to My Website</h1>
-        <nav>
+
+    <!-- ============================================================
+         HEADER — Reusable on every page
+         ============================================================ -->
+    <header class="header-bar">
+
+        <!-- LEFT SIDE (empty on purpose) -->
+        <div class="header-left"></div>
+
+        <!-- CENTER NAV LINKS -->
+        <nav class="top-nav">
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
+            <a href="travel.html">Travel</a>
             <a href="contact.html">Contact</a>
             <a href="special.html">Special</a>
         </nav>
+
+        <!-- RIGHT SIDE — Your Name -->
+        <div class="header-right">
+            <a href="index.html" class="name-link">Dylan Gantt</a>
+        </div>
+
     </header>
-    <section>
+
+<div class="social-icons">
+    <a href="https://www.instagram.com/dylan.gntt" target="_blank">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram">
+    </a>
+
+    <a href="https://x.com/dylanvgantt" target="_blank">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/x.svg" alt="X">
+    </a>
+
+    <a href="https://www.linkedin.com/in/dylan-gantt/" target="_blank">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg" alt="LinkedIn">
+    </a>
+
+    <a href="mailto:dylan.gntt@gmail.com">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/gmail.svg" alt="Gmail">
+    </a>
+</div>
+    <!-- ============================================================
+         PAGE CONTENT
+         ============================================================ -->
+    <section class="content-section">
         <h2>About Me</h2>
-        <p>Hi, I'm Dylan Gantt! Welcome to my personal website where I share my experiences and projects.</p>
+        <p>Hi, I'm Dylan Gantt! Thanks for visiting my website! It's still a work in progress!</p>
     </section>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
     <footer>
         <p>&copy; 2025 Dylan Gantt</p>
     </footer>
+
 </body>
 </html>
 
