@@ -124,3 +124,41 @@ footer {
     transform: scale(1.15);
     filter: drop-shadow(0 0 8px #4da3ff);   /* glow hover effect */
 }
+
+/* ============================================================
+   MOBILE HEADER LAYOUT
+   ============================================================ */
+@media (max-width: 768px) {
+    .header-bar {
+        flex-wrap: wrap;
+        padding: 10px 14px;
+    }
+
+    .header-left {
+        display: none;              /* free up space on the left */
+    }
+
+    .header-right {
+        order: 1;
+        padding-right: 0;
+        flex: 1;
+        justify-content: flex-end;  /* keep your name on the right */
+    }
+
+    .top-nav {
+        order: 2;
+        flex-basis: 100%;           /* force nav onto its own row */
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 6px;
+    }
+
+    .top-nav a {
+        font-size: 16px;            /* slightly smaller links */
+    }
+
+    .header-right a {
+        font-size: 22px;            /* slightly smaller name */
+    }
+}
