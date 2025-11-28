@@ -124,7 +124,13 @@ footer {
     transform: scale(1.15);
     filter: drop-shadow(0 0 8px #4da3ff);   /* glow hover effect */
 }
-
+/* Active nav underline */
+.top-nav a.active {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    color: #ffffff;
+}
 /* ============================================================
    MOBILE HEADER LAYOUT
    ============================================================ */
